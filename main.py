@@ -16,4 +16,32 @@ spaceship.left(90)
 spaceship.goto(0,-250)
 
 
+
+def move_left():
+    x = spaceship.xcor()
+    x -= 20
+    spaceship.setx(x)
+
+
+def move_right():
+    x = spaceship.xcor()
+    x += 20
+    spaceship.setx(x)
+
+
+
+screen.listen()
+screen.onkey(move_left, 'Left')
+screen.onkey(move_right, 'Right')
+
+
+
+
+
+
+
+
+
+
+
 screen.mainloop()
