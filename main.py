@@ -1,5 +1,5 @@
 import turtle as t
-
+import time
 screen = t.Screen()
 
 screen.setup(width=700, height=700)
@@ -44,7 +44,7 @@ def shoot_bullets():
     bullets.append(bullet)
 
 
-
+IS_GAME_RUNNING = True
 
 for row in range(3):
     for col in range(5):
@@ -69,7 +69,7 @@ screen.onkey(shoot_bullets, 'space')
 
 invader_speed = 4
 bullet_speed = 10
-while True:
+while IS_GAME_RUNNING:
     for invader in invaders:
         x = invader.xcor()
         x += invader_speed
@@ -90,11 +90,24 @@ while True:
                 bullet.hideturtle()
                 bullets.remove(bullet)
         for bullet in bullets:
-            if bullet.distance(invader) < 15:
+            if bullet.distance(invader) < 20:
                 invader.hideturtle()
                 invaders.remove(invader)
                 bullet.hideturtle()
                 bullets.remove(bullet)
+        if invader.distance(spaceship) < 20:
+            spaceship.hideturtle()
+            pen = t.Turtle()
+            pen.color('red')
+            pen.hideturtle()
+            pen.speed(0)
+            pen.penup()
+            pen.goto(0,0)
+            pen.write('Game Over', align='center', font=('Arial', 30, 'bold'))
+            invaders.clear()
+            time.sleep(3)
+            IS_GAME_RUNNING = False
+
         
    
 
