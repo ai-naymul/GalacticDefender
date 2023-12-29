@@ -24,18 +24,18 @@ Welcome to Galactic Defender! This is a simple space-themed game built using the
     - Avoid collisions with invaders; otherwise, it's game over!
 
 ## Dependencies
-    - Python 3.x
-    - Turtle graphics module (usually included in Python standard library)
+- Python 3.x
+- Turtle graphics module (usually included in Python standard library)
 
 ## Code Overview
-    - The game consists of a spaceship that can be moved left and right using arrow keys.
-    - Invaders (squares) move horizontally and change direction when they reach the screen edge.
-    - Bullets are shot from the spaceship and move vertically to hit the invaders.
-    - The game ends if an invader collides with the spaceship.
+- The game consists of a spaceship that can be moved left and right using arrow keys.
+- Invaders (squares) move horizontally and change direction when they reach the screen edge.
+- Bullets are shot from the spaceship and move vertically to hit the invaders.
+- The game ends if an invader collides with the spaceship.
 
 ## Credits
-    - This game was created using Python's Turtle graphics module.
-    - Inspired by classic space-invader games.
+- This game was created using Python's Turtle graphics module.
+- Inspired by classic space-invader games.
 
 Feel free to explore, modify, and enhance the game as you like! If you encounter any issues or have suggestions for improvements, please feel free to contribute to the project.
 
